@@ -1,0 +1,64 @@
+dn: dc=mycompany,dc=com  
+objectClass: top  
+objectClass: dcObject  
+objectClass: domain  
+dc: mycompany  
+  
+dn: ou=roles,dc=mycompany,dc=com  
+objectClass: top  
+objectClass: organizationalUnit  
+ou: roles  
+  
+dn: ou=people,dc=mycompany,dc=com  
+objectClass: top  
+objectClass: organizationalUnit  
+ou: people  
+  
+dn: cn=Test Users,ou=roles,dc=mycompany,dc=com  
+objectClass: groupOfUniqueNames  
+cn: Test Users  
+uniqueMember: uid=sspecial,ou=people,dc=mycompany,dc=com  
+uniqueMember: uid=jbloggs,ou=people,dc=mycompany,dc=com  
+  
+dn: cn=Special Users,ou=roles,dc=mycompany,dc=com  
+objectClass: groupOfUniqueNames  
+cn: Special Users  
+uniqueMember: uid=sspecial,ou=people,dc=mycompany,dc=com  
+  
+dn: cn=Admin Users,ou=roles,dc=mycompany,dc=com  
+objectClass: groupOfUniqueNames  
+cn: Admin Users  
+uniqueMember: uid=admin,ou=people,dc=mycompany,dc=com  
+  
+dn: uid=admin,ou=people,dc=mycompany,dc=com  
+objectClass: person  
+objectClass: inetOrgPerson  
+cn: State App  
+displayName: App Admin  
+givenName: App  
+mail: admin@fake.org  
+sn: Admin  
+uid: admin  
+userPassword: adminpassword  
+  
+dn: uid=jbloggs,ou=people,dc=mycompany,dc=com  
+objectClass: person  
+objectClass: inetOrgPerson  
+cn: Joe Bloggs  
+displayName: Joe Bloggs  
+givenName: Joe  
+mail: jbloggs@fake.org  
+sn: Bloggs  
+uid: jbloggs  
+userPassword: password  
+  
+dn: uid=sspecial,ou=people,dc=mycompany,dc=com  
+objectClass: person  
+objectClass: inetOrgPerson  
+cn: Super Special  
+displayName: Super Special  
+givenName: Super  
+mail: sspecial@fake.org  
+sn: Special  
+uid: sspecial  
+userPassword: password
